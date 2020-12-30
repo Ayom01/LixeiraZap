@@ -1,0 +1,95 @@
+#:import utils kivy.utils
+
+<FloatLayout>:
+    canvas.before:
+        Color:
+            rgb: utils.get_color_from_hex('#4E4D4D')
+        Rectangle:
+            size: 1080, self.height
+            pos: 0, 0
+        Color:
+            rgb: utils.get_color_from_hex('#333333')
+        Rectangle:
+            size: self.width, self.height
+            pos: 1080, 0
+
+    BoxLayout:
+        BoxLayout:
+            orientation: 'vertical'
+
+            ScrollView:
+                BoxLayout:
+                    id: chat
+                    orientation: 'vertical'
+                    size_hint_y: None
+                    height: self.minimum_height
+                    
+                    Label:
+                        text: "Teste"
+                        font_size: 40
+                        size_hint_y: None
+                        height: 100
+
+            TextInput:
+                size_hint: (None, None)
+                height: 33
+                width: 860
+                multiline: False
+                on_text_validate: root.write(self.text)
+
+        BoxLayout:
+            size_hint_x: .265
+            ScrollView:
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint_y: None
+                    height: self.minimum_height
+
+                    Label:
+                        text: "Hello"
+                        font_size: 40
+                        size_hint_y: None
+                        height: 100
+                    Label:
+                        text: "Hello"
+                        font_size: 40
+                        size_hint_y: None
+                        height: 100
+                    Label:
+                        text: "Hello"
+                        font_size: 40
+                        size_hint_y: None
+                        height: 100
+                    Label:
+                        font_size: 40
+                        text: "Hello"
+                        font_size: 40
+                        size_hint_y: None
+                        height: 100
+                    Label:
+                        text: "Hello"
+                        font_size: 40
+                        size_hint_y: None
+                        height: 100
+                    Label:
+                        text: "Hello"
+                        font_size: 40
+                        size_hint_y: None
+                        height: 100
+                    Label:
+                        text: "Hello"
+                        font_size: 40
+                        size_hint_y: None
+                        height: 100
+                    Label:
+                        font_size: 40
+                        text: "Hello"
+                        font_size: 40
+                        size_hint_y: None
+                        height: 100
+                    Label:
+                        text: "Hello"
+                        font_size: 40
+                        size_hint_y: None
+                        height: 100
+        
